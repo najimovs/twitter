@@ -8,5 +8,9 @@
 		"start": "node --env-file=.env src/index.js"
 	},
 	"license": "ISC",
-	"packageManager": "pnpm@10.28.2"
+	"packageManager": "pnpm@10.28.2",
+	"dependencies": {
+		"cors": "^2.8.6",
+		"express": "^5.2.1"
+	}
 }
