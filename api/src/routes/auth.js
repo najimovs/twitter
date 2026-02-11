@@ -1,6 +1,6 @@
 import { Router } from "express"
 
-const router = new Router()
+export const router = new Router()
 
 router.get( "/signup", ( req, res ) => {
 
@@ -11,5 +11,3 @@ router.get( "/login", ( req, res ) => {
 
 	res.send( { ok: true} )
 } )
-
-export default router

@@ -3,6 +3,11 @@
 	"private": true,
 	"main": "index.js",
 	"type": "module",
+	"imports": {
+		"#lib/*": "./src/library/*.js",
+		"#routes": "./src/routes/index.js",
+		"#routes/*": "./src/routes/*.js"
+	},
 	"scripts": {
 		"dev": "node --watch --env-file=.env src/index.js",
 		"start": "node --env-file=.env src/index.js"

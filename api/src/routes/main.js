@@ -1,7 +1,7 @@
 import { Router } from "express"
-import { query } from "../library/query.js"
+import { query } from "#lib/query"
 
-const router = new Router()
+export const router = new Router()
 
 router.get( "/", ( req, res ) => {
 
@@ -17,5 +17,3 @@ router.get( "/health", async ( req, res ) => {
 		pgVersion: dbTest[ 0 ].version,
 	} )
 } )
-
-export default router
