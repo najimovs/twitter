@@ -1,0 +1,12 @@
+{
+	"name": "api",
+	"private": true,
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "node --watch --env-file=.env src/index.js",
+		"start": "node --env-file=.env src/index.js"
+	},
+	"license": "ISC",
+	"packageManager": "pnpm@10.28.2"
+}
