@@ -8,16 +8,23 @@ export const pool = new Pool( {
 	database: process.env.PG_DBNAME,
 } )
 
+let client = null
+
 export async function query( SQL, ...params ) {
 
 	try {
 
-		const { rows } = await pool.query( SQL, params )
+		client = await pool.connect()
+
+		const { rows } = await client.query( SQL, params )
 
 		return rows
 	}
 	finally {
 
-		await pool.end()
+		if ( client ) {
+
+			client.release()
+		}
 	}
 }
