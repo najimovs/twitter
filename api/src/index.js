@@ -1,5 +1,8 @@
 import express from "express"
 import cors from "cors"
+import { query } from "./library/query.js"
+
+console.log( await query( "select version()" ) )
 
 const PORT = process.env.PORT
 const app = express()
